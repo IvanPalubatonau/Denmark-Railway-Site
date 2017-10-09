@@ -4,7 +4,7 @@ package com.epam.dsb.denmarkRailway;
  * Hello world!
  *
  */
-public class App 
+public class BasePage 
 {
     public static void main( String[] args )
     {
