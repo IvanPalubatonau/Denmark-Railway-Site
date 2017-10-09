@@ -12,17 +12,17 @@ public class WebDriverSingletone {
 	private static final String DEFAULT_WEB_DRIVER = "CHROME";
 	private static final int COMMAND_DEFAULT_TIMEOUT_SECONDS = 10;
     
-	private static WebDriver singltone = null;
+	private static WebDriver singletone = null;
 
 	private WebDriverSingletone() {
 		
 	}
 
 	public static WebDriver getMyBrowser() {
-		if (singltone != null) {
-			return singltone;
+		if (singletone != null) {
+			return singletone;
 		}
-		return singltone = init();
+		return singletone = init();
 	}
 
 	private static WebDriver init() {
