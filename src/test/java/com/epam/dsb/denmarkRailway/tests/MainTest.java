@@ -3,6 +3,7 @@ package com.epam.dsb.denmarkRailway.tests;
 import org.testng.annotations.Test;
 
 import com.epam.dsb.denmarkRailway.pages.CombinedMuseumReturnTrainTicketPage;
+import com.epam.dsb.denmarkRailway.pages.DeliveryFormPage;
 import com.epam.dsb.denmarkRailway.pages.MainPage;
 
 public class MainTest extends AbstactTest{
@@ -13,7 +14,7 @@ public class MainTest extends AbstactTest{
 	MainPage mainpage= new MainPage();
 	mainpage.openMainPage();
 	CombinedMuseumReturnTrainTicketPage museumpage=mainpage.openCombinedMuseumReturnTrainTicketPage();
-	
+	DeliveryFormPage deliverypage=museumpage.openDeliveryFormPage();
 	
 	}
 
