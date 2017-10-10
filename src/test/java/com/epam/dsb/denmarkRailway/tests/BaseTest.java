@@ -9,12 +9,14 @@ import com.epam.dsb.denmarkRailway.utils.WebDriverSingletone;
 
 public class BaseTest{
 	
-	public static final String URL = "https://www.dsb.dk/en";
-	//protected Browser browser;
-	
+
 	@Test
 	public void Test() {
 	
-	//browser.open(URL);
+	MainPage mainpage= new MainPage();
+	mainpage.openMainPage()
+	.openCombinedMuseumReturnTrainTicketPage();
+	
+	
 	}
 }

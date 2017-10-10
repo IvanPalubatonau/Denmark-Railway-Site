@@ -1,36 +1,30 @@
 package com.epam.dsb.denmarkRailway.pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
+import com.epam.dsb.denmarkRailway.utils.MyLogger;
+import com.epam.dsb.denmarkRailway.utils.MyWait;
+import com.epam.dsb.denmarkRailway.utils.Screenshoter;
 import com.epam.dsb.denmarkRailway.utils.WebDriverSingletone;
 
-
-
-public class BasePage 
-{
-	
+public abstract class BasePage {
 
 	protected WebDriver driver;
-	
 
 	protected BasePage() {
-		this.driver=WebDriverSingletone.getMyBrowser();
+		this.driver = WebDriverSingletone.getMyBrowser();
 	}
 
-	
-	
 	public void open(String url) {
-	       // Logger.info("Going to URL: " + url);
+		MyLogger.info("Going to URL: " + url);
 		driver.get(url);
-	    }
-	
+	}
+
 	public void click(final By locator) {
-        //waitForElementVisible(locator);
-      //  Logger.info("Clicking element '" + driver.findElement(locator).getText() + "' (Located: " + locator + ")");
-       // highlightElement(locator);
-       // takeScreenshot();
-       // unHighlightElement(locator);
+		MyWait.waitForElementVisible(locator);
+		MyLogger.info("Clicking element '" + driver.findElement(locator).getText() + "'(Located: " + locator + ")");
+		Screenshoter.takeScreenshot();
 		driver.findElement(locator).click();
-    }
+	}
 }
