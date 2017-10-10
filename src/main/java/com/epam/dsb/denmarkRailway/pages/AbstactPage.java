@@ -8,11 +8,11 @@ import com.epam.dsb.denmarkRailway.utils.MyWait;
 import com.epam.dsb.denmarkRailway.utils.Screenshoter;
 import com.epam.dsb.denmarkRailway.utils.WebDriverSingletone;
 
-public abstract class BasePage {
+public abstract class AbstactPage {
 
 	protected WebDriver driver;
 
-	protected BasePage() {
+	protected AbstactPage() {
 		this.driver = WebDriverSingletone.getMyBrowser();
 	}
 
