@@ -43,7 +43,7 @@ public abstract class AbstractPage {
 	}
 
 	public void click(final By locator) {
-		MyWait.waitForElementVisible(locator);
+		MyWait.waitForElementPresent(locator);
 		MyLogger.info("Clicking element '" + driver.findElement(locator).getText() + "'(Located: " + locator + ")");
 		driver.findElement(locator).click();
 
@@ -68,7 +68,7 @@ public abstract class AbstractPage {
 
 	// LOGGER!!!!
 	public void selectByVisibleText(By locator, String text) {
-		MyWait.waitForElementEnabled(locator);
+		MyWait.waitForElementVisible(locator);
 		WebElement element = driver.findElement(locator);
 		element.click();
 		Select select = new Select(element);
@@ -113,6 +113,7 @@ public abstract class AbstractPage {
 	        Screenshoter.takeScreenshot();
 	        
 	    }
+	 
 	 public void selectElementInDropMenu(By menuLocator,By selectableLocator ) {
 	        WebElement element;
 	        MyWait.waitForElementVisible(menuLocator);
@@ -124,6 +125,14 @@ public abstract class AbstractPage {
 	            	        
 		        Actions action = new Actions(driver);
 	            action.moveToElement(element).click().build().perform();
+	     	        
+	    }
+	 
+	 public String getTextofElement(By locator) {
+		 MyWait.waitForElementVisible(locator);
+			MyLogger.info("Clicking element '" + driver.findElement(locator).getText() + "'(Located: " + locator + ")");
+			String textOfElement=driver.findElement(locator).getText();
+			return textOfElement;
 	     	        
 	    }
 }

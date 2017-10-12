@@ -20,7 +20,7 @@ public class WebDriverSingletone {
 	private static final String PATH_TO_CHROME_WEBDRIVER = "src/test/resources/chromedriver.exe";
 	private static final String BROWSER = "chrome";
 	private static final String HUB = "http://localhost:4444/wd/hub";
-	private static final int COMMAND_DEFAULT_TIMEOUT_SECONDS = 10;
+	private static final int COMMAND_DEFAULT_TIMEOUT_SECONDS = 15;
 	private static WebDriver singletone = null;
 
 	private WebDriverSingletone() {

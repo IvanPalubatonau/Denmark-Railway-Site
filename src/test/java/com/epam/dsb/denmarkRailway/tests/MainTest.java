@@ -1,6 +1,7 @@
 package com.epam.dsb.denmarkRailway.tests;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.epam.dsb.denmarkRailway.pages.CombinedMuseumReturnTrainTicketPage;
@@ -14,6 +15,8 @@ public class MainTest extends AbstractTest{
 	private static final String ID = "VISA";
 	private static final String FOUR_DIGITS_CREDIT_CARD = "1234";
 	private static final String NAME_OF_PASSENGER = "Jen Pedersen";
+	private static final String EXPECTED_PRICE = "190 kr.";
+	
 
 	@Test
 	public void Test() {
@@ -28,7 +31,7 @@ public class MainTest extends AbstractTest{
 	deliverypage.enterLastFourDigitsOfCredutCard(FOUR_DIGITS_CREDIT_CARD);
 	deliverypage.enterNameOfPassenger(NAME_OF_PASSENGER);
 	ConfirmYourBookingPage bookingPage=deliverypage.openConfirmYourBookingPage();
-	
+	Assert.assertEquals(bookingPage.getPriceOfTicket(),EXPECTED_PRICE );
 	}
 
 }
