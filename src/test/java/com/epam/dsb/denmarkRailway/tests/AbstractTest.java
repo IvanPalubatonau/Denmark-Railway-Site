@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 
 import com.epam.dsb.denmarkRailway.utils.WebDriverSingletone;
 
-public abstract class AbstactTest {
+public abstract class AbstractTest {
 	protected WebDriver driver;
 
 	@BeforeTest
@@ -17,7 +17,7 @@ public abstract class AbstactTest {
 
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		//driver.close();
 	}
 
 }

@@ -11,9 +11,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebDriverSingletone {
-	private static final String DEFAULT_WEB_DRIVER = "REMOTE.CHROME";
-	private static final int COMMAND_DEFAULT_TIMEOUT_SECONDS = 10;
-	private static final String FIREFOX_WEBDRIVER = "webdriver.gecko.driver";
+	private static final String DEFAULT_WEB_DRIVER = "CHROME";
+    private static final String FIREFOX_WEBDRIVER = "webdriver.gecko.driver";
 	private static final String EXPLORER_WEBDRIVER = "webdriver.ie.driver";
 	private static final String CHROME_WEBDRIVER = "webdriver.chrome.driver";
 	private static final String PATH_TO_FIREFOX_WEBDRIVER = "src/test/resources/geckodriver.exe";
@@ -21,7 +20,7 @@ public class WebDriverSingletone {
 	private static final String PATH_TO_CHROME_WEBDRIVER = "src/test/resources/chromedriver.exe";
 	private static final String BROWSER = "chrome";
 	private static final String HUB = "http://localhost:4444/wd/hub";
-
+	private static final int COMMAND_DEFAULT_TIMEOUT_SECONDS = 10;
 	private static WebDriver singletone = null;
 
 	private WebDriverSingletone() {
