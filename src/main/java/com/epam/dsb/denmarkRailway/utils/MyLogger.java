@@ -4,7 +4,7 @@ import org.slf4j.LoggerFactory;
 
 
 
-public class MyLogger {
+public  class MyLogger {
 
 public static org.slf4j.Logger logger = LoggerFactory.getLogger(MyLogger.class);
     public static void error(String message) {
